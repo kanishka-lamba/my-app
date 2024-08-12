@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 
-function ContextMenu() {
+const ContextMenu = () => {
   const [boxClicked, setBoxClicked] = useState(false);
   const [isHoverOpen, setIsHoverOpen] = useState(false);
   const hoverRef = useRef(null);
@@ -8,7 +8,6 @@ function ContextMenu() {
     // Prevent the default context menu
     event.preventDefault();
     setBoxClicked(!boxClicked);
-    // Custom logic to execute on right-click
   };
   const handleMouseLeave = (e) => {
     // Ensure that e.relatedTarget is not null and is an element node
@@ -80,6 +79,6 @@ function ContextMenu() {
       )}
     </div>
   );
-}
+};
 
 export default ContextMenu;

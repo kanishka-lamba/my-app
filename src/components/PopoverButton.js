@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-function PopoverButton() {
+const PopoverButton = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const [isHoverOpen, setIsHoverOpen] = useState(false);
   const [hoverDepth, setHoverDepth] = useState(0);
@@ -17,6 +17,8 @@ function PopoverButton() {
   };
 
   const renderNestedMenus = (depth) => {
+    // Check if the current hover depth is greater than or equal to the depth passed to the function.
+    // If so, render the nested dropdown menu; otherwise, return null to stop rendering further nested menus.
     if (hoverDepth >= depth) {
       return (
         <div
@@ -29,19 +31,24 @@ function PopoverButton() {
         >
           <ul className="font-medium text-xl text-center">
             <li
-              className="py-2 px-4 cursor-pointer hover:bg-zinc-700 hover:text-lime-500 "
+              className="py-2 px-4 cursor-pointer hover:bg-zinc-700 hover:text-lime-500"
+              // When the mouse enters the list item, increase the depth by 1 to show the next nested menu.
               onMouseEnter={() => handleMouseEnterdepth(depth + 1)}
+              // When the mouse leaves the list item, decrease the depth by 1 to hide the current nested menu.
               onMouseLeave={() => handleMouseLeavedepth(depth + 1)}
             >
               Hover
+              {/* Recursively call renderNestedMenus to create the next level of the nested menu */}
               {renderNestedMenus(depth + 1)}
             </li>
           </ul>
         </div>
       );
     }
+    // Return null if hoverDepth is less than the current depth, indicating no further menus should be rendered.
     return null;
   };
+
   const handleMouseLeave = (e) => {
     // Ensure that e.relatedTarget is not null and is an element node
     if (e.relatedTarget && e.relatedTarget.nodeType === Node.ELEMENT_NODE) {
@@ -141,6 +148,6 @@ function PopoverButton() {
       </div>
     </div>
   );
-}
+};
 
 export default PopoverButton;
