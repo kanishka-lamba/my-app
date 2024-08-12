@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# React UI Components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates the creation of interactive UI components using React. It includes a `PopoverButton` and a `ContextMenu`, each designed to handle user interactions with nested menus. The solution aims to match the reference video as closely as possible.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+### Components
 
-### `npm start`
+#### PopoverButton
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Description**: A button that toggles a popover menu when clicked. The popover contains nested dropdown menus that appear on hover.
+- **Features**:
+  - Main popover menu with multi-level nested menus.
+  - Recursive rendering to handle multiple nested levels.
+  - State management to control visibility and depth of nested menus.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### ContextMenu
 
-### `npm test`
+- **Description**: A context menu that appears on right-click. It also features a nested menu that shows on hover.
+- **Features**:
+  - Custom context menu triggered by right-click.
+  - Hoverable nested menus.
+  - Visibility control based on user interactions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- **Interactive UI**: Both components offer dynamic interactions such as hover and click events.
+- **Extendable Code**: The codebase is structured to be easily extendable and modifiable.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Assumptions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Framework**: React is chosen for its component-based architecture, which is suitable for this task.
+- **Styling**: Basic styling is applied using Tailwind and CSS. Custom styles can be adjusted in `App.css` or component-specific CSS files.
+- **Behavior Matching**: The implementation is designed to align closely with the behavior shown in the reference video.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+To get started with this project, follow these steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Node.js](https://nodejs.org/) must be installed on your machine.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/your-repository.git
+   cd your-repository
+2. Install dependencies:
+   ```sh
+   npm install
 
-## Learn More
+## Running the Project
+    To start the development server:
+    npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## File Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `App.js`: Integrates the `PopoverButton` and `ContextMenu` components.
+- `ContextMenu.js`: Defines the `ContextMenu` component.
+- `PopoverButton.js`: Defines the `PopoverButton` component.
+- `App.css`: Contains styles for the application.
 
-### Code Splitting
+## Demonstration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Implementation Demo
 
-### Analyzing the Bundle Size
+https://github.com/user-attachments/assets/570b483f-d347-440c-8c14-d340a80bff5f
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Reference Video
 
-### Making a Progressive Web App
+https://github.com/user-attachments/assets/bd0cbb26-47b4-4a62-ba2e-4ffd3c8649d3
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
